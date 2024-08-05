@@ -20,3 +20,7 @@ This project is intended for educational purposes only. The author is not respon
 - !message \<title\> \<message\> - Shows a message box with the selected arguments
 - !discord - Sends Discord account info and token
 - !cookies - Sends browser cookies (WIP)
+## Setup
+1. Clone the repository
+   ```git clone https://github.com/LunarrBlue/PySpy.git
+   cd PySpy```
