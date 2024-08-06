@@ -6,7 +6,7 @@ This project is intended for educational purposes only. The author is not respon
 - Multiple computers at once
 - Grabs computer details
 - Grabs browser passwords
-- Grabs browser cookies (WIP)
+- Grabs browser cookies
 - Grabs Discord account info
 - Startup persistance
 - Anti-VM (Optional)
@@ -19,7 +19,7 @@ This project is intended for educational purposes only. The author is not respon
 - !exit - Closes the current session and exits the exe
 - !message \<title\> \<message\> - Shows a message box with the selected arguments
 - !discord - Sends Discord account info and token
-- !cookies - Sends browser cookies (WIP)
+- !cookies - Sends browser cookies
 ## Setup
 1. Clone the repository
    ```
