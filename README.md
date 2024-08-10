@@ -40,5 +40,5 @@ If you would like to rebuild the EXE for any reason, run `rebuild.bat` then foll
 ## Help
 - Bot opens empty sessions
    - Ran by a VM or AV caught it, try turning off real-time protection.
-- Install Python or pip if needed, the builder can *sometimes* install python correctly
+- You must have Python 3.12.4
 - Minimum of Windows 7
