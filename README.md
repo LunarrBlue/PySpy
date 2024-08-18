@@ -43,7 +43,6 @@ This project is intended for educational purposes only. The author is not respon
 ---
 If you would like to rebuild the EXE for any reason, run `rebuild.bat` then follow the steps above.
 ## Ideas
-- File encryption & decryption
 - Work on !run
 - Fix 50 MB download limit
 - Fix when a directory has too many files to send
