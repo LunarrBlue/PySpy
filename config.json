@@ -1,7 +1,0 @@
-{
-    "token": "BOT_TOKEN_HERE",
-    "app_name": "PySpy",
-    "app_logo": "window.ico",
-    "members": "100",
-    "anti-vm": "True"
-}
