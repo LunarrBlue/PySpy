@@ -24,6 +24,8 @@ This project is intended for educational purposes only. The author is not respon
 - !restart - Restarts the host computer
 - !press \<keys\> - Presses any amount of keys all at once
 - !website \<url\> - Opens the url in the default browser
+- !encrypt \<path\> - Encrypts the selected path with the passsword
+- !decrypt \<path\> - Decrypts the selected path with the passsword
 ## Setup
 1. Clone the repository
    ```
@@ -35,6 +37,7 @@ This project is intended for educational purposes only. The author is not respon
    - "app_logo" -> Path to EXE logo
    - "members" -> Mimimum members in a Discord server to be shown by `!discord`
    - "anti-vm" -> Defines if anti-vm should be enabled
+   - "password" -> Password for encryption and decryption
 3. Run `build.bat` and wait
 4. Distribute the EXE located in `dist`
 ---
@@ -44,8 +47,29 @@ If you would like to rebuild the EXE for any reason, run `rebuild.bat` then foll
 - Work on !run
 - Fix 50 MB download limit
 - Fix when a directory has too many files to send
-## Help
-- Bot opens empty sessions
-   - Ran by a VM or AV caught it, try turning off real-time protection.
+## !cd
+You can use !cd normally, but there are also predefined directorys. Just type the predefined directory after !cd.
+Keep in mind that you can use ".." to go backwards
+- home<
+- desktop<
+- downloads<
+- documents<
+- pictures<
+- music<
+- videos<
+- temp<
+- appdata<
+- localappdata<
+- programfiles<
+- programfilesx86<
+- windows<
+- systemroot<
+- system32<
+- commonprogramfiles<
+- commonprogramfilesx86<
+- startmenu<
+- programdata<
+
+## Requirements
 - You must have Python 3.12.4
 - Minimum of Windows 7
