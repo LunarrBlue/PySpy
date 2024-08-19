@@ -26,6 +26,9 @@ This project is intended for educational purposes only. The author is not respon
 - !website \<url\> - Opens the url in the default browser
 - !encrypt \<path\> - Encrypts the selected path with the passsword
 - !decrypt \<path\> - Decrypts the selected path with the passsword
+- !clipboard - Returns the clipboard contents
+- !webcam - Takes a photo from the main webcam
+- !combine - Run multiple commands at once
 ## Setup
 1. Clone the repository
    ```
