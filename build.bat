@@ -8,7 +8,7 @@ python -m pip install --upgrade pip
 echo Installed pip
 
 echo Installing Packages
-pip install pyinstaller psutil discord.py pyautogui numpy opencv-python pyperclip cryptography pyttsx3 requests pywin32 pycryptodome
+pip install pyinstaller psutil discord.py pyautogui numpy opencv-python pyperclip cryptography pyttsx3 requests pywin32 pycryptodome comtypes
 echo Installed Packages
 
 echo Compiling scripts
