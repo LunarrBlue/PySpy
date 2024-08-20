@@ -1,7 +1,7 @@
 {
     "token": "BOT_TOKEN_HERE",
     "app_name": "PySpy",
-    "app_logo": "windows.ico",
+    "app_logo": "window.ico",
     "members": "100",
     "anti-vm": "True",
     "password": "pyspy123"
